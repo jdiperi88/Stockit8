@@ -18,7 +18,7 @@
 
 
     <%= javascript_include_tag "application" %>
-
+    
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>
@@ -37,8 +37,9 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "My Portfolio", my_portfolio_path  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to 'Log in',  new_user_session_path %></li>
+            <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+            
           </ul>
         </div>
       </div>
@@ -54,7 +55,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2017</p>
+        <p>&copy; StockIT 2017</p>
       </footer>
 
     </div> <!-- /container -->
